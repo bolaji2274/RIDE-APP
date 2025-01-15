@@ -29,12 +29,17 @@ class LoginNeedsVerification extends Notification
         return [TwilioChannel::class];
     }
 
-    public function toTwilio(object $notifiable): TwilioMessage
+    // public function toTwilio(object $notifiable): TwilioMessage
+    // {
+    //     return (new TwilioMessage())
+    //         ->content('Your login code is 123456');
+    // }
+    public function toTwilio($notifiable)
     {
-        return (new TwilioMessage())
-            ->content('Your login code is 123456');
+        $loginCode = rand(111111, 999999);
+        return (new TwilioSmsMessage())
+            ->content("Your Andrewber login code is ")
     }
-
 
 
     /**
