@@ -38,7 +38,7 @@ class LoginNeedsVerification extends Notification
     {
         $loginCode = rand(111111, 999999);
         return (new TwilioSmsMessage())
-            ->content("Your Andrewber login code is ")
+            ->content("Your H & B login code is ")
     }
 
 
