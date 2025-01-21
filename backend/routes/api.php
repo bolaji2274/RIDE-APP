@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+
 Route::post('/login', [LoginController::class, 'submit']);
 Route::post('/login/verify', [LoginController::class, 'verify'])
 
